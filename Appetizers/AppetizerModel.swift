@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Appetizer: Decodable {
+struct Appetizer: Decodable, Identifiable {
     let id: Int
     let name : String
     let description: String
@@ -25,16 +25,13 @@ struct AppetizerResponse: Decodable {
 struct MockData {
     
     static let sampleAppetizer = Appetizer(id: 0001,
-                                           name: "Test Appetizers",
+                                           name: "Test Appetizer",
                                            description: "Description for delicious appetizer",
-                                           price: 9.99,
+                                           price: 10.99,
                                            imageURL: "" ,
                                            calories: 99,
                                            protein: 29,
                                            carbs: 99)
     
-    static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
-
-
+    static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
 }
-
