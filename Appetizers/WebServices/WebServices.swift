@@ -12,8 +12,8 @@ final class WebServices {
     
     static let shared = WebServices()
 
-    static let baseURL = "http://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
-    private let appetizerURL = baseURL + "appetizer"
+    static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
+    private let appetizerURL = baseURL + "appetizers"
     
     private init() {}
     
@@ -26,7 +26,7 @@ final class WebServices {
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
             
-            guard let _ = error else {
+            if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
             }
