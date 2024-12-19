@@ -11,10 +11,13 @@ final class AppetizerListViewModel: ObservableObject {
     
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
+    @Published var showSpinner = false
     
     func getAppetizers() {
+        showSpinner = true
         WebServices.shared.getAppetizers { result in
             DispatchQueue.main.async { [self] in
+                showSpinner = false
                 
                 switch result {
                     
