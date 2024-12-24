@@ -10,11 +10,11 @@ import SwiftUI
 struct DetailView: View {
     
     let appetizer: Appetizer
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
-            Image("asian-flank-steak")
-                .resizable()
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 225)
             
@@ -28,25 +28,10 @@ struct DetailView: View {
                     .font(.body)
                     .padding()
                 
-                HStack {
-                    VStack {
-                        Text("Calories")
-                            .font(.caption)
-                            .bold()
-                        
-                        Text("\(appetizer.calories)")
-                        
-                    }
-                    
-                    VStack {
-                        Text("Carbs")
-                        Text("\(appetizer.carbs)")
-                    }
-                    
-                    VStack {
-                        Text("Proteins")
-                        Text("\(appetizer.protein)")
-                    }
+                HStack(spacing: 40){
+                    NutritionInfo(title: "Calories", value: appetizer.calories)
+                    NutritionInfo(title: "Carbs", value: appetizer.carbs)
+                    NutritionInfo(title: "Protein", value: appetizer.protein)
                 }
             }
             
@@ -55,40 +40,42 @@ struct DetailView: View {
             Button {
                 print("tapped")
             } label: {
-                
-                Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.brandPrimary)
-                    .cornerRadius(10)
+                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
             }
             .padding(.bottom, 30)
-
-            
         }
         .frame(width: 300, height: 525)
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
-            print("X tapped")
+            isShowingDetail = false
         } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.white)
-                    .opacity(0.6)
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .frame(width: 44, height: 44)
-                    .foregroundColor(.black)
-            }
+            XDismissButton()
         }, alignment: .topTrailing)
     }
 }
 
+
+struct NutritionInfo: View {
+    
+    let title: String
+    let value: Int
+    
+    var body: some View {
+        VStack(spacing: 5) {
+            Text(title)
+                .font(.caption)
+                .bold()
+            
+            Text("\(value)")
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+                .italic()
+        }
+    }
+}
+
 #Preview {
-    DetailView(appetizer: MockData.sampleAppetizer)
+    DetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(true))
 }

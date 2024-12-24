@@ -12,37 +12,46 @@ struct AppetizerListView: View {
     @StateObject var viewModel = AppetizerListViewModel()
     @State private var showSpinner = true
     
+    
     var body: some View {
         ZStack {
             NavigationView {
-                VStack {
-                    
-                    if viewModel.showSpinner == true {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: Color("brandPrimary")))
-                            .scaleEffect(2.0, anchor: .center)
-                            .padding()
-                    } else {
-                        List(viewModel.appetizers) { appetizer in
-                            AppetizerListCell(appetizer: appetizer)
-                            
-                        }
+                
+                if viewModel.showSpinner == true {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color("brandPrimary")))
+                        .scaleEffect(2.0, anchor: .center)
+                        .padding()
+                } else {
+                    List(viewModel.appetizers) { appetizer in
+                        AppetizerListCell(appetizer: appetizer)
+                            .onTapGesture {
+                                viewModel.selectedAppetizer = appetizer
+                                viewModel.isShowingDetail = true
+                            }
                     }
+                    .navigationTitle("🍗 Appetizers")
+                    .disabled(viewModel.isShowingDetail ? true : false)
                 }
-                .navigationTitle("🍗 Appetizers")
-                .onAppear {
-                    viewModel.getAppetizers()
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                        showSpinner = false
-                    }
-                }
-                .alert(item: $viewModel.alertItem) { alertItem in
-                    Alert(title: alertItem.title,
-                          message: alertItem.message,
-                          dismissButton: alertItem.dismissButton)
+                
+            }
+            .onAppear {
+                viewModel.getAppetizers()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    showSpinner = false
                 }
             }
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0)
+            
+            
+            if viewModel.isShowingDetail {
+                DetailView(appetizer: viewModel.selectedAppetizer!, isShowingDetail: $viewModel.isShowingDetail)
+            }
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }
