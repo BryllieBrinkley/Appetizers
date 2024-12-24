@@ -21,10 +21,12 @@
 		5712633D2D161F360022487B /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC37A02D16190E002998D7 /* RemoteImage.swift */; };
 		571263422D16200E0022487B /* Preview Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 57CC37912D16190E002998D7 /* Preview Assets.xcassets */; };
 		571263432D16200E0022487B /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 57CC379E2D16190E002998D7 /* Assets.xcassets */; };
+		5785731E2D19DFB80011908E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785731D2D19DFB80011908E /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		571263312D161DF20022487B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5785731D2D19DFB80011908E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		57CC37912D16190E002998D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57CC37932D16190E002998D7 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		57CC37942D16190E002998D7 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				57CC37992D16190E002998D7 /* AppetizerListView.swift */,
 				57CC379A2D16190E002998D7 /* AppetizerListViewModel.swift */,
+				5785731D2D19DFB80011908E /* DetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				571263382D161F320022487B /* AppetizerListViewModel.swift in Sources */,
 				571263392D161F320022487B /* AppetizerModel.swift in Sources */,
 				5712633A2D161F320022487B /* AppetizersApp.swift in Sources */,
+				5785731E2D19DFB80011908E /* DetailView.swift in Sources */,
 				5712633B2D161F320022487B /* AppetizerTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
