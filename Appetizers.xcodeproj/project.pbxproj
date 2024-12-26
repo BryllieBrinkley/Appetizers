@@ -25,6 +25,7 @@
 		571DA80A2D1B69A50039DAD1 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA8092D1B69A50039DAD1 /* XDismissButton.swift */; };
 		571DA80C2D1DD0620039DAD1 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA80B2D1DD0620039DAD1 /* AccountViewModel.swift */; };
 		571DA80E2D1DD1CF0039DAD1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA80D2D1DD1CF0039DAD1 /* String+Ext.swift */; };
+		571DA8102D1DEE730039DAD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA80F2D1DEE730039DAD1 /* User.swift */; };
 		5785731E2D19DFB80011908E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785731D2D19DFB80011908E /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		571DA8092D1B69A50039DAD1 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		571DA80B2D1DD0620039DAD1 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		571DA80D2D1DD1CF0039DAD1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		571DA80F2D1DEE730039DAD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5785731D2D19DFB80011908E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		57CC37912D16190E002998D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57CC37932D16190E002998D7 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				57CC379B2D16190E002998D7 /* AppetizerModel.swift */,
+				571DA80F2D1DEE730039DAD1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				571DA80C2D1DD0620039DAD1 /* AccountViewModel.swift in Sources */,
 				5712633D2D161F360022487B /* RemoteImage.swift in Sources */,
 				571263322D161F320022487B /* APError.swift in Sources */,
+				571DA8102D1DEE730039DAD1 /* User.swift in Sources */,
 				571263332D161F320022487B /* WebServices.swift in Sources */,
 				571DA8082D1B5FD50039DAD1 /* APButton.swift in Sources */,
 				571263342D161F320022487B /* AccountView.swift in Sources */,
