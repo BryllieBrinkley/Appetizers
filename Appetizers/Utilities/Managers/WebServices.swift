@@ -69,7 +69,6 @@ final class WebServices {
             return
         }
         
-        
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, _ in
             
             guard let data = data, let image = UIImage(data: data) else {
@@ -80,6 +79,5 @@ final class WebServices {
             completed(image)
         }
         task.resume()
-        
     }
 }

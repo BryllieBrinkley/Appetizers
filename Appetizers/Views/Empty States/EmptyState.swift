@@ -35,5 +35,5 @@ struct EmptyState: View {
 }
 
 #Preview {
-    EmptyState(imageName: "empty-order", message: "test message. adding length to make suere that it is long for testing purposes")
+    EmptyState(imageName: "empty-order", message: "Here is a long message to my empty state View for preview/ testing purposes. ")
 }

@@ -37,7 +37,7 @@ struct AccountView: View {
                 .toggleStyle(SwitchToggleStyle(tint: Color("brandPrimary")))
             }
             .navigationTitle("👥 Account")
-
+            
         }
         .onAppear {
             viewModel.retrieveUser()

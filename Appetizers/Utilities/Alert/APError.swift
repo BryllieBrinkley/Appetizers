@@ -7,8 +7,4 @@
 
 import Foundation
 
-enum APError: Error {
-    
-    case invalidURL, invalidResponse, invalidData, unableToComplete
-
-}
+enum APError: Error { case invalidURL, invalidResponse, invalidData, unableToComplete }

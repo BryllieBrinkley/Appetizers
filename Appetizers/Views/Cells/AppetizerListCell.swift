@@ -18,7 +18,6 @@ struct AppetizerListCell: View {
                 .frame(width: 120, height: 90)
                 .cornerRadius(8)
             
-            
             VStack(alignment: .leading, spacing: 5){
                 Text(appetizer.name)
                     .font(.title2)
@@ -30,7 +29,6 @@ struct AppetizerListCell: View {
                     .fontWeight(.semibold)
             }
             .padding(.leading)
-            
         }
     }
 }

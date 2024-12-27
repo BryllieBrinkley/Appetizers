@@ -33,7 +33,6 @@ struct AppetizerListView: View {
                     .navigationTitle("🍗 Appetizers")
                     .disabled(viewModel.isShowingDetail ? true : false)
                 }
-                
             }
             .onAppear {
                 viewModel.getAppetizers()
