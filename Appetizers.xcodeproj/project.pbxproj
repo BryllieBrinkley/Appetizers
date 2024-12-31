@@ -27,6 +27,9 @@
 		571DA80E2D1DD1CF0039DAD1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA80D2D1DD1CF0039DAD1 /* String+Ext.swift */; };
 		571DA8102D1DEE730039DAD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA80F2D1DEE730039DAD1 /* User.swift */; };
 		5785731E2D19DFB80011908E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785731D2D19DFB80011908E /* DetailView.swift */; };
+		57DEADD82D1F2298009BE1CF /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DEADD72D1F2298009BE1CF /* EmptyState.swift */; };
+		57EBB0F62D1F4E060016C930 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EBB0F52D1F4E060016C930 /* Order.swift */; };
+		57EBB0F82D1F66830016C930 /* Custom Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EBB0F72D1F66830016C930 /* Custom Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +54,10 @@
 		57CC379E2D16190E002998D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57CC379F2D16190E002998D7 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		57CC37A02D16190E002998D7 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		57DEADD72D1F2298009BE1CF /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		57DF17F52D136235000CAB6B /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57EBB0F52D1F4E060016C930 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		57EBB0F72D1F66830016C930 /* Custom Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Modifiers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 			children = (
 				57CC379B2D16190E002998D7 /* AppetizerModel.swift */,
 				571DA80F2D1DEE730039DAD1 /* User.swift */,
+				57EBB0F52D1F4E060016C930 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,9 +166,11 @@
 		5785731A2D162F4B0011908E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57DEADD62D1F2289009BE1CF /* Empty States */,
 				571DA8062D1B5F610039DAD1 /* Buttons */,
 				5785731C2D162F6C0011908E /* Image */,
 				5785731B2D162F590011908E /* Cells */,
+				57EBB0F72D1F66830016C930 /* Custom Modifiers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +212,14 @@
 				571263312D161DF20022487B /* Info.plist */,
 			);
 			path = Appetizers;
+			sourceTree = "<group>";
+		};
+		57DEADD62D1F2289009BE1CF /* Empty States */ = {
+			isa = PBXGroup;
+			children = (
+				57DEADD72D1F2298009BE1CF /* EmptyState.swift */,
+			);
+			path = "Empty States";
 			sourceTree = "<group>";
 		};
 		57DF17EC2D136235000CAB6B = {
@@ -293,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				571263422D16200E0022487B /* Preview Assets.xcassets in Sources */,
+				57EBB0F82D1F66830016C930 /* Custom Modifiers.swift in Sources */,
 				571263432D16200E0022487B /* Assets.xcassets in Sources */,
 				571DA80A2D1B69A50039DAD1 /* XDismissButton.swift in Sources */,
 				5712633C2D161F360022487B /* OrderView.swift in Sources */,
+				57EBB0F62D1F4E060016C930 /* Order.swift in Sources */,
 				571DA80E2D1DD1CF0039DAD1 /* String+Ext.swift in Sources */,
 				571DA80C2D1DD0620039DAD1 /* AccountViewModel.swift in Sources */,
 				5712633D2D161F360022487B /* RemoteImage.swift in Sources */,
@@ -307,6 +326,7 @@
 				571263352D161F320022487B /* Alert.swift in Sources */,
 				571263362D161F320022487B /* AppetizerListCell.swift in Sources */,
 				571263372D161F320022487B /* AppetizerListView.swift in Sources */,
+				57DEADD82D1F2298009BE1CF /* EmptyState.swift in Sources */,
 				571263382D161F320022487B /* AppetizerListViewModel.swift in Sources */,
 				571263392D161F320022487B /* AppetizerModel.swift in Sources */,
 				5712633A2D161F320022487B /* AppetizersApp.swift in Sources */,
@@ -454,6 +474,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +505,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

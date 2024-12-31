@@ -28,8 +28,11 @@ struct OrderView: View {
                         order.items = []
                         orderPlaced = true
                     } label: {
-                        APButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place Order")
+                        Text("$\(order.totalPrice, specifier: "%.2f") - Place Order")
                     }
+                    .modifier(StandardButtonStyle())
+                    .padding(.bottom, 25)
+                    
                     .alert(isPresented: $orderPlaced) {
                         Alert(title: Text("Order Placed"), message: Text("Your order has been placed. Enjoy!"), dismissButton: .default(Text("Dismiss")))
                     }

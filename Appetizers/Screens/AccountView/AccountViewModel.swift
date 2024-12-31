@@ -41,7 +41,7 @@ final class AccountViewModel: ObservableObject {
     
     var isValidForm: Bool {
         
-        guard !user.firstName.isEmpty && !user.lasttName.isEmpty && !user.email.isEmpty else {
+        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
             alertItem = AlertContext.formImcomplete
             return false
         }

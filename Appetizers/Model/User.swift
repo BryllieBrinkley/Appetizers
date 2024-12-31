@@ -10,7 +10,7 @@ import Foundation
 struct User: Codable {
     
     var firstName = ""
-    var lasttName = ""
+    var lastName = ""
     var email = ""
     var birthdate = Date()
     var extraNapkins = false
